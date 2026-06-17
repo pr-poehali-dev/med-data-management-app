@@ -26,12 +26,28 @@ const SettingsPage = () => {
       </div>
 
       <div className="card-hover animate-fade-in rounded-3xl border border-border bg-card p-6">
-        <div className="mb-3 flex items-center justify-between">
-          <p className="font-semibold">Хранилище</p>
+        <div className="mb-4 flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <Icon name="HardDrive" size={18} className="text-primary" />
+            <p className="font-semibold">Хранилище</p>
+          </div>
           <span className="text-sm text-muted-foreground">6.4 ГБ из 15 ГБ</span>
         </div>
         <div className="h-3 w-full overflow-hidden rounded-full bg-secondary">
           <div className="h-full grad-primary" style={{ width: '43%' }} />
+        </div>
+        <div className="mt-4 grid grid-cols-3 gap-3">
+          {[
+            { label: 'Документы', size: '3.1 ГБ', icon: 'FileText', color: 'text-teal-500' },
+            { label: 'Снимки', size: '2.8 ГБ', icon: 'ScanLine', color: 'text-violet-500' },
+            { label: 'Прочее', size: '0.5 ГБ', icon: 'Folder', color: 'text-amber-500' },
+          ].map((f) => (
+            <div key={f.label} className="rounded-xl bg-secondary/60 p-3 text-center">
+              <Icon name={f.icon} size={18} className={`mx-auto mb-1 ${f.color}`} />
+              <p className="text-sm font-semibold">{f.size}</p>
+              <p className="text-xs text-muted-foreground">{f.label}</p>
+            </div>
+          ))}
         </div>
         <button onClick={() => toast.success('Переход на Premium (демо)')} className="mt-4 flex items-center gap-2 text-sm font-medium text-primary hover:underline">
           <Icon name="Crown" size={15} /> Расширить до безлимита

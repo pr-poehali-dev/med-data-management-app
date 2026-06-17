@@ -6,7 +6,7 @@ const STATS = [
   { key: 'docs', label: 'Документов', value: '63', icon: 'Files', grad: 'from-teal-400 to-cyan-500', sub: '+4 за неделю' },
   { key: 'labs', label: 'Анализов', value: '18', icon: 'FlaskConical', grad: 'from-violet-400 to-indigo-500', sub: '6 показателей' },
   { key: 'family', label: 'Членов семьи', value: '4', icon: 'Users', grad: 'from-pink-400 to-rose-500', sub: 'все профили активны' },
-  { key: 'storage', label: 'Хранилище', value: '6.4 ГБ', icon: 'HardDrive', grad: 'from-amber-400 to-orange-500', sub: 'из 15 ГБ' },
+  { key: 'settings', label: 'Ближайший приём', value: 'Терапевт', icon: 'CalendarClock', grad: 'from-amber-400 to-orange-500', sub: '19 июня · 14:30' },
 ] as const;
 
 const Dashboard = ({ onNavigate }: { onNavigate: (k: NavKey) => void }) => {
