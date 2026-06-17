@@ -13,7 +13,7 @@ export const NAV: NavItem[] = [
   { key: 'card', label: 'Медицинская карта', icon: 'HeartPulse' },
   { key: 'labs', label: 'Анализы', icon: 'FlaskConical' },
   { key: 'docs', label: 'Документы', icon: 'Files' },
-  { key: 'symptoms', label: 'Симптомы', icon: 'Activity' },
+  { key: 'symptoms', label: 'Дневник самочувствия', icon: 'Activity' },
   { key: 'family', label: 'Семья', icon: 'Users' },
   { key: 'cycle', label: 'Женский календарь', icon: 'CalendarHeart' },
   { key: 'access', label: 'Доступ врачу', icon: 'QrCode' },
